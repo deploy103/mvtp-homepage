@@ -600,6 +600,96 @@ h3 {
   gap: 8px;
 }
 
+.profile-interests .profile-contact-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 22px;
+}
+
+.profile-interests .profile-career {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  margin-top: 22px;
+}
+
+.profile-career-panel {
+  background: #f7faf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.profile-career-panel .eyebrow {
+  margin-bottom: 14px;
+}
+
+.profile-career-panel ul {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-career-panel li {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.45;
+  padding-left: 18px;
+  position: relative;
+}
+
+.profile-career-panel li::before {
+  background: var(--green);
+  border-radius: 999px;
+  content: "";
+  height: 7px;
+  left: 0;
+  position: absolute;
+  top: 9px;
+  width: 7px;
+}
+
+.profile-contact-link {
+  background: #f7faf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  min-height: 78px;
+  padding: 16px;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.profile-contact-link:hover,
+.profile-contact-link:focus-visible {
+  border-color: rgba(31, 122, 97, 0.45);
+  box-shadow: 0 12px 28px rgba(23, 32, 29, 0.1);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.profile-contact-link span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.profile-contact-link strong {
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.profile-contact-link:last-child {
+  grid-column: 1 / -1;
+}
+
 @media (max-width: 1060px) {
   .service-grid,
   .hardware-grid {
@@ -670,6 +760,14 @@ h3 {
   .service-grid,
   .hardware-grid,
   .profile-details {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-interests .profile-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-interests .profile-career {
     grid-template-columns: 1fr;
   }
 
