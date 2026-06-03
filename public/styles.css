@@ -27,6 +27,8 @@ body {
   background: var(--page);
   color: var(--ink);
   font-family: Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  min-width: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -113,7 +115,7 @@ svg {
 .hero {
   background-image:
     linear-gradient(90deg, rgba(9, 17, 15, 0.88), rgba(9, 17, 15, 0.58), rgba(9, 17, 15, 0.22)),
-    url("/hero-datacenter.jpg");
+    url("hero-datacenter.jpg");
   background-position: left center;
   background-size: cover;
   color: #ffffff;
@@ -498,6 +500,7 @@ h3 {
 
 .profile-page {
   min-height: 100svh;
+  overflow-x: hidden;
   padding: 24px;
 }
 
@@ -505,6 +508,7 @@ h3 {
   justify-content: flex-start;
   margin: 0 auto 34px;
   max-width: 1120px;
+  width: 100%;
 }
 
 .profile-back {
@@ -518,6 +522,7 @@ h3 {
 .profile-section {
   margin: 0 auto;
   max-width: 1120px;
+  width: 100%;
 }
 
 .profile-hero {
@@ -529,7 +534,7 @@ h3 {
   color: #ffffff;
   display: grid;
   gap: 24px;
-  grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.75fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.75fr);
   overflow: hidden;
   padding: 46px;
   position: relative;
@@ -546,6 +551,7 @@ h3 {
 }
 
 .profile-identity {
+  min-width: 0;
   position: relative;
   z-index: 1;
 }
@@ -554,6 +560,7 @@ h3 {
   font-size: 58px;
   line-height: 1;
   margin-bottom: 16px;
+  overflow-wrap: anywhere;
 }
 
 .profile-identity p:last-of-type {
@@ -561,6 +568,7 @@ h3 {
   font-size: 18px;
   line-height: 1.72;
   max-width: 720px;
+  overflow-wrap: anywhere;
 }
 
 .profile-avatar {
@@ -592,12 +600,13 @@ h3 {
 }
 
 .profile-snapshot {
-  align-self: end;
+  align-self: stretch;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
   display: grid;
   gap: 0;
+  min-width: 0;
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -639,6 +648,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 14px 34px rgba(23, 32, 29, 0.08);
+  min-width: 0;
   padding: 26px;
 }
 
@@ -646,6 +656,7 @@ h3 {
   font-size: 30px;
   margin-bottom: 14px;
   max-width: 720px;
+  overflow-wrap: anywhere;
 }
 
 .profile-focus-main p {
@@ -674,6 +685,7 @@ h3 {
   display: block;
   font-size: 28px;
   line-height: 1.22;
+  overflow-wrap: anywhere;
 }
 
 .profile-achievement-card span {
@@ -702,7 +714,7 @@ h3 {
 }
 
 .profile-activity-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
 }
 
 .profile-activity-grid article {
@@ -712,6 +724,7 @@ h3 {
   box-shadow: 0 12px 28px rgba(23, 32, 29, 0.07);
   display: grid;
   gap: 10px;
+  min-width: 0;
   min-height: 126px;
   padding: 20px;
 }
@@ -755,6 +768,7 @@ h3 {
   box-shadow: 0 12px 28px rgba(23, 32, 29, 0.07);
   display: grid;
   gap: 7px;
+  min-width: 0;
   min-height: 92px;
   padding: 18px;
   transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
@@ -798,7 +812,7 @@ h3 {
   }
 
   .profile-activity-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   }
 
   .profile-contact-grid {
@@ -905,6 +919,18 @@ h3 {
     padding: 18px;
   }
 
+  .profile-header,
+  .profile-hero,
+  .profile-focus,
+  .profile-section {
+    max-width: calc(100vw - 36px);
+    width: calc(100vw - 36px);
+  }
+
+  .profile-back {
+    width: fit-content;
+  }
+
   .profile-hero {
     padding: 28px;
   }
@@ -915,5 +941,29 @@ h3 {
 
   .profile-focus-main h2 {
     font-size: 26px;
+  }
+}
+
+@media (max-width: 420px) {
+  .profile-page {
+    padding: 14px;
+  }
+
+  .profile-header,
+  .profile-hero,
+  .profile-focus,
+  .profile-section {
+    max-width: calc(100vw - 28px);
+    width: calc(100vw - 28px);
+  }
+
+  .profile-hero,
+  .profile-focus-card {
+    padding: 24px;
+  }
+
+  .profile-identity p:last-of-type {
+    font-size: 16px;
+    line-height: 1.66;
   }
 }

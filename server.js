@@ -135,7 +135,12 @@ async function serveStatic(req, res, urlPath) {
 
     const ext = path.extname(filePath).toLowerCase();
     const contentType = mimeTypes[ext] || "application/octet-stream";
-    const cacheControl = ext === ".html" ? "no-store" : "public, max-age=604800, immutable";
+    const cacheControl =
+      ext === ".html"
+        ? "no-store"
+        : ext === ".css" || ext === ".js"
+          ? "no-cache, max-age=0"
+          : "public, max-age=604800, immutable";
 
     res.writeHead(200, {
       ...securityHeaders,
