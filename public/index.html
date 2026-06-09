@@ -9,8 +9,8 @@
     />
     <title>MVTP Cloud</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260604-1" />
-    <script defer src="main.js?v=20260604-1"></script>
+    <link rel="stylesheet" href="styles.css?v=20260609-1" />
+    <script defer src="main.js?v=20260609-1"></script>
   </head>
   <body>
     <header class="site-header">
@@ -20,6 +20,7 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#sites">사이트</a>
+        <a href="downloads.html">자료실</a>
         <a href="#hardware">장비</a>
         <a href="about.html">내 정보</a>
       </nav>
@@ -48,6 +49,14 @@
                 <path d="M7 17 17 7M9 7h8v8" />
               </svg>
             </a>
+            <a class="button button-secondary" href="downloads.html">
+              자료실
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <path d="M7 10l5 5 5-5" />
+                <path d="M12 15V3" />
+              </svg>
+            </a>
           </div>
 
           <div class="uptime-panel" role="status" aria-live="polite">
@@ -74,10 +83,26 @@
           <div class="section-heading">
             <p class="eyebrow">Quick links</p>
             <h2>사이트로 이동하기</h2>
-            <p>MVTP에서 운영 중인 주요 서브도메인입니다.</p>
+            <p>MVTP에서 운영 중인 주요 서브도메인과 공개 자료입니다.</p>
           </div>
 
           <div class="service-grid">
+            <a class="service-card" href="https://rice.mvtp.cloud" target="_blank" rel="noreferrer noopener">
+              <span class="service-icon service-icon-amber">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 3h16" />
+                  <path d="M5 3v10a7 7 0 0 0 14 0V3" />
+                  <path d="M8 21h8" />
+                  <path d="M12 17v4" />
+                </svg>
+              </span>
+              <span class="service-copy">
+                <strong>Rice</strong>
+                <span>오늘의 급식을 빠르게 확인할 수 있는 급식 안내 사이트입니다.</span>
+                <em>rice.mvtp.cloud</em>
+              </span>
+            </a>
+
             <a class="service-card" href="https://english.mvtp.cloud" target="_blank" rel="noreferrer noopener">
               <span class="service-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -139,6 +164,22 @@
                 <strong>C Compiler</strong>
                 <span>Web C Compiler 서비스 입니다.</span>
                 <em>c.mvtp.cloud</em>
+              </span>
+            </a>
+
+            <a class="service-card" href="downloads.html">
+              <span class="service-icon service-icon-coral">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+                  <path d="M14 2v6h6" />
+                  <path d="M12 18v-6" />
+                  <path d="m9 15 3 3 3-3" />
+                </svg>
+              </span>
+              <span class="service-copy">
+                <strong>자료실</strong>
+                <span>MVTP에서 공개하는 실행 파일과 자료를 내려받을 수 있습니다.</span>
+                <em>downloads</em>
               </span>
             </a>
 

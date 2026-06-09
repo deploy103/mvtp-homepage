@@ -18,6 +18,7 @@ const mimeTypes = {
   ".svg": "image/svg+xml",
   ".webp": "image/webp",
   ".ico": "image/x-icon",
+  ".exe": "application/vnd.microsoft.portable-executable",
 };
 
 const securityHeaders = {
@@ -98,7 +99,14 @@ async function handleUptime(req, res) {
 }
 
 function resolveStaticPath(urlPath) {
-  const normalizedPath = urlPath === "/" ? "/index.html" : urlPath === "/about" ? "/about.html" : urlPath;
+  const normalizedPath =
+    urlPath === "/"
+      ? "/index.html"
+      : urlPath === "/about"
+        ? "/about.html"
+        : urlPath === "/downloads" || urlPath === "/downloads/"
+          ? "/downloads.html"
+          : urlPath;
   const decodedPath = decodeURIComponent(normalizedPath);
   const filePath = path.resolve(PUBLIC_DIR, `.${decodedPath}`);
 
@@ -107,6 +115,16 @@ function resolveStaticPath(urlPath) {
   }
 
   return filePath;
+}
+
+function getAttachmentName(filePath) {
+  const relativePath = path.relative(PUBLIC_DIR, filePath).split(path.sep).join("/");
+
+  if (!relativePath.startsWith("downloads/")) {
+    return null;
+  }
+
+  return path.basename(filePath).replace(/["\\\r\n]/g, "");
 }
 
 async function serveStatic(req, res, urlPath) {
@@ -135,6 +153,7 @@ async function serveStatic(req, res, urlPath) {
 
     const ext = path.extname(filePath).toLowerCase();
     const contentType = mimeTypes[ext] || "application/octet-stream";
+    const attachmentName = getAttachmentName(filePath);
     const cacheControl =
       ext === ".html"
         ? "no-store"
@@ -142,11 +161,18 @@ async function serveStatic(req, res, urlPath) {
           ? "no-cache, max-age=0"
           : "public, max-age=604800, immutable";
 
-    res.writeHead(200, {
+    const headers = {
       ...securityHeaders,
       "Content-Type": contentType,
+      "Content-Length": stat.size,
       "Cache-Control": cacheControl,
-    });
+    };
+
+    if (attachmentName) {
+      headers["Content-Disposition"] = `attachment; filename="${attachmentName}"`;
+    }
+
+    res.writeHead(200, headers);
 
     if (req.method === "HEAD") {
       res.end();
