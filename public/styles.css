@@ -882,6 +882,8 @@ h3 {
 }
 
 .download-list {
+  display: grid;
+  gap: 16px;
   margin-top: 18px;
 }
 
@@ -906,6 +908,11 @@ h3 {
   height: 66px;
   justify-content: center;
   width: 66px;
+}
+
+.download-file-icon-amber {
+  background: #352718;
+  color: var(--amber);
 }
 
 .download-file-copy h2 {
