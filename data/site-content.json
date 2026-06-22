@@ -1,0 +1,90 @@
+{
+  "serviceStatuses": [
+    {
+      "id": "rice",
+      "name": "Rice",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
+      "id": "english",
+      "name": "English",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
+      "id": "japan",
+      "name": "Japan",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
+      "id": "login",
+      "name": "Login",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
+      "id": "c-compiler",
+      "name": "C Compiler",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
+      "id": "medas",
+      "name": "Medas",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
+      "id": "downloads",
+      "name": "자료실",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
+      "id": "hsoc",
+      "name": "HSOC",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
+      "id": "ctf",
+      "name": "CTF",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
+      "id": "network",
+      "name": "Network Lab",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
+      "id": "chat",
+      "name": "Chat",
+      "status": "운영중",
+      "state": "online"
+    }
+  ],
+  "activities": [
+    {
+      "name": "한세사이버보안고등학교 31기"
+    },
+    {
+      "name": "HanSei Dev Ops 차장"
+    },
+    {
+      "name": "HsShell 차장"
+    },
+    {
+      "name": "HS-CTF Team"
+    },
+    {
+      "name": "한세 기능부 부원"
+    },
+    {
+      "name": "교내해커톤 한세톤 생활 부문 우승"
+    }
+  ]
+}

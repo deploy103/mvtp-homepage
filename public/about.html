@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="MVTP 운영자 정보 페이지입니다." />
-    <title>내 정보 | MVTP Cloud</title>
+    <meta name="description" content="deploy103 프로필 페이지입니다." />
+    <title>Profile | MVTP Cloud</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260609-3" />
+    <link rel="stylesheet" href="styles.css?v=20260622-3" />
+    <script defer src="main.js?v=20260622-3"></script>
   </head>
   <body class="profile-body">
-    <main class="profile-page">
+    <main class="profile-page profile-shell">
       <header class="profile-header">
         <a class="button button-secondary profile-back" href="index.html">
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -20,14 +21,13 @@
         </a>
       </header>
 
-      <section class="profile-hero" aria-label="Owner profile">
-        <div class="profile-identity">
-          <div class="profile-avatar" aria-hidden="true">D103</div>
-          <p class="eyebrow">Owner profile</p>
+      <section class="profile-overview" aria-label="deploy103 profile">
+        <div class="profile-intro">
+          <p class="eyebrow">Profile</p>
           <h1>deploy103</h1>
           <p>
-            MVTP Cloud를 운영하며 홈랩, 웹 서비스, 시스템 보안, 포렌식, 네트워크를 중심으로 인프라와 보안
-            프로젝트를 다룹니다.
+            MVTP Cloud를 운영하며 홈랩 인프라, 웹 서비스, 시스템 보안, 포렌식, 네트워크를 다룹니다.
+            직접 서버를 굴리면서 배포와 운영 흐름을 실전 중심으로 쌓고 있습니다.
           </p>
           <div class="profile-actions">
             <a class="button button-primary" href="mailto:youghwjdkill1@gmail.com">
@@ -47,104 +47,87 @@
           </div>
         </div>
 
-        <aside class="profile-snapshot" aria-label="Profile summary">
-          <div>
-            <span>Role</span>
-            <strong>Server Operator</strong>
-          </div>
-          <div>
-            <span>Location</span>
-            <strong>서울특별시 강서구</strong>
-          </div>
-          <div>
-            <span>School</span>
-            <strong>한세사이버보안고등학교 31기</strong>
+        <aside class="profile-panel" aria-label="Profile summary">
+          <div class="profile-avatar" aria-hidden="true">D103</div>
+          <div class="profile-facts">
+            <div>
+              <span>Role</span>
+              <strong>Server Operator</strong>
+            </div>
+            <div>
+              <span>School</span>
+              <strong>한세사이버보안고등학교 31기</strong>
+            </div>
+            <div>
+              <span>Location</span>
+              <strong>서울특별시 강서구</strong>
+            </div>
           </div>
         </aside>
       </section>
 
-      <section class="profile-focus" aria-label="Focus areas">
-        <article class="profile-focus-card profile-focus-main">
-          <p class="eyebrow">Focus</p>
-          <h2>Home lab, cloud service, security operation</h2>
-          <p>
-            MVTP 서버를 직접 운영하면서 서비스 배포, reverse proxy, DNS, 서버 장비 관리까지 이어지는
-            실전형 인프라를 구축하고 있습니다.
-          </p>
-          <div class="profile-chip-row">
-            <span class="badge badge-neutral">Home Lab</span>
-            <span class="badge badge-neutral">Cloud</span>
-            <span class="badge badge-neutral">Security</span>
-            <span class="badge badge-neutral">Web Service</span>
-            <span class="badge badge-neutral">System Security</span>
-            <span class="badge badge-neutral">Forensic</span>
-            <span class="badge badge-neutral">Network</span>
+      <section class="profile-content-grid">
+        <section class="profile-section profile-section-activities" aria-label="Activities and career">
+          <div class="profile-section-heading">
+            <p class="eyebrow">Activities</p>
+            <h2>활동 내역</h2>
           </div>
-        </article>
+          <div class="profile-activity-grid" data-activity-list>
+            <article><strong>한세사이버보안고등학교 31기</strong></article>
+            <article><strong>HanSei Dev Ops 차장</strong></article>
+            <article><strong>HsShell 차장</strong></article>
+            <article><strong>HS-CTF Team</strong></article>
+            <article><strong>한세 기능부 부원</strong></article>
+            <article><strong>교내해커톤 한세톤 생활 부문 우승</strong></article>
+          </div>
+        </section>
 
-        <article class="profile-focus-card profile-achievement-card">
-          <p class="eyebrow">Achievement</p>
-          <strong>교내해커톤 한세톤 생활 부문 우승</strong>
-          <span>아이디어를 실제 서비스 흐름으로 구현한 교내 프로젝트 경험</span>
-        </article>
-      </section>
+        <aside class="profile-side-stack">
+          <section class="profile-section profile-focus-compact" aria-label="Focus areas">
+            <div class="profile-section-heading">
+              <p class="eyebrow">Focus</p>
+              <h2>관심 분야</h2>
+            </div>
+            <div class="profile-chip-row">
+              <span class="badge badge-neutral">Home Lab</span>
+              <span class="badge badge-neutral">Cloud</span>
+              <span class="badge badge-neutral">Security</span>
+              <span class="badge badge-neutral">Web Service</span>
+              <span class="badge badge-neutral">System Security</span>
+              <span class="badge badge-neutral">Forensic</span>
+              <span class="badge badge-neutral">Network</span>
+            </div>
+          </section>
 
-      <section class="profile-section" aria-label="Activities and career">
-        <div class="profile-section-heading">
-          <p class="eyebrow">Activities</p>
-          <h2>활동 / 소속</h2>
-        </div>
-        <div class="profile-activity-grid">
-          <article>
-            <span>School</span>
-            <strong>한세사이버보안고등학교 31기</strong>
-          </article>
-          <article>
-            <span>DevOps</span>
-            <strong>HanSei Dev Ops 차장</strong>
-          </article>
-          <article>
-            <span>Shell</span>
-            <strong>HsShell 차장</strong>
-          </article>
-          <article>
-            <span>CTF</span>
-            <strong>HS-CTF Team</strong>
-          </article>
-          <article>
-            <span>Club</span>
-            <strong>한세 기능부 부원</strong>
-          </article>
-        </div>
-      </section>
-
-      <section class="profile-section" aria-label="Contact links">
-        <div class="profile-section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>연락 / 계정</h2>
-        </div>
-        <div class="profile-contact-grid">
-          <a class="profile-contact-link" href="https://www.instagram.com/deploy103" target="_blank" rel="noreferrer noopener">
-            <span>Instagram</span>
-            <strong>@deploy103</strong>
-          </a>
-          <a class="profile-contact-link" href="https://github.com/deploy103" target="_blank" rel="noreferrer noopener">
-            <span>GitHub</span>
-            <strong>@deploy103</strong>
-          </a>
-          <a class="profile-contact-link" href="https://dreamhack.io/users/empty306" target="_blank" rel="noreferrer noopener">
-            <span>DreamHack</span>
-            <strong>empty306</strong>
-          </a>
-          <a class="profile-contact-link" href="tel:+821023575974">
-            <span>Phone</span>
-            <strong>+82 10-2357-5974</strong>
-          </a>
-          <a class="profile-contact-link" href="mailto:youghwjdkill1@gmail.com">
-            <span>Email</span>
-            <strong>youghwjdkill1@gmail.com</strong>
-          </a>
-        </div>
+          <section class="profile-section" aria-label="Contact links">
+            <div class="profile-section-heading">
+              <p class="eyebrow">Contact</p>
+              <h2>연락 / 계정</h2>
+            </div>
+            <div class="profile-contact-list">
+              <a class="profile-contact-link" href="https://www.instagram.com/deploy103" target="_blank" rel="noreferrer noopener">
+                <span>Instagram</span>
+                <strong>@deploy103</strong>
+              </a>
+              <a class="profile-contact-link" href="https://github.com/deploy103" target="_blank" rel="noreferrer noopener">
+                <span>GitHub</span>
+                <strong>@deploy103</strong>
+              </a>
+              <a class="profile-contact-link" href="https://dreamhack.io/users/empty306" target="_blank" rel="noreferrer noopener">
+                <span>DreamHack</span>
+                <strong>empty306</strong>
+              </a>
+              <a class="profile-contact-link" href="tel:+821023575974">
+                <span>Phone</span>
+                <strong>+82 10-2357-5974</strong>
+              </a>
+              <a class="profile-contact-link" href="mailto:youghwjdkill1@gmail.com">
+                <span>Email</span>
+                <strong>youghwjdkill1@gmail.com</strong>
+              </a>
+            </div>
+          </section>
+        </aside>
       </section>
     </main>
   </body>

@@ -1,5 +1,7 @@
 const uptimeText = document.querySelector("[data-uptime-live]");
 const uptimeBoot = document.querySelector("[data-uptime-boot]");
+const serviceCards = document.querySelectorAll("[data-service-id]");
+const activityList = document.querySelector("[data-activity-list]");
 
 let snapshot = null;
 
@@ -45,6 +47,58 @@ async function loadUptime() {
   }
 }
 
+function renderServiceStatuses(services = []) {
+  if (!serviceCards.length) return;
+
+  const servicesById = new Map(services.map((service) => [service.id, service]));
+
+  serviceCards.forEach((card) => {
+    const service = servicesById.get(card.dataset.serviceId);
+    const status = card.querySelector("[data-service-status]");
+
+    if (!service || !status) return;
+
+    status.textContent = service.status;
+    status.className = `service-status service-status-${service.state || "neutral"}`;
+  });
+}
+
+function renderActivities(activities = []) {
+  if (!activityList) return;
+
+  activityList.replaceChildren(
+    ...activities.map((activity) => {
+      const article = document.createElement("article");
+      const name = document.createElement("strong");
+      name.textContent = activity.name;
+      article.append(name);
+      return article;
+    }),
+  );
+}
+
+async function loadSiteContent() {
+  if (!serviceCards.length && !activityList) return;
+
+  try {
+    const response = await fetch("/api/site-content", { cache: "no-store" });
+    if (!response.ok) throw new Error("Failed to load site content");
+
+    const data = await response.json();
+    renderServiceStatuses(data.serviceStatuses || []);
+    renderActivities(data.activities || []);
+  } catch {
+    if (activityList && !activityList.children.length) {
+      const article = document.createElement("article");
+      const name = document.createElement("strong");
+      name.textContent = "활동 내역을 불러오지 못했습니다.";
+      article.append(name);
+      activityList.append(article);
+    }
+  }
+}
+
 loadUptime();
+loadSiteContent();
 window.setInterval(loadUptime, 30000);
 window.setInterval(renderUptime, 1000);

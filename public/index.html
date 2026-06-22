@@ -9,8 +9,8 @@
     />
     <title>MVTP Cloud</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260609-3" />
-    <script defer src="main.js?v=20260609-1"></script>
+    <link rel="stylesheet" href="styles.css?v=20260622-3" />
+    <script defer src="main.js?v=20260622-3"></script>
   </head>
   <body>
     <header class="site-header">
@@ -20,10 +20,9 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#sites">사이트</a>
-        <a href="https://ctfd.mvtp.cloud" target="_blank" rel="noreferrer noopener">CTF</a>
         <a href="downloads.html">자료실</a>
         <a href="#hardware">장비</a>
-        <a href="about.html">내 정보</a>
+        <a href="/profile">프로필</a>
       </nav>
     </header>
 
@@ -44,8 +43,8 @@
                 <path d="M12 5v14m0 0 6-6m-6 6-6-6" />
               </svg>
             </a>
-            <a class="button button-secondary" href="about.html">
-              내 정보
+            <a class="button button-secondary" href="/profile">
+              프로필
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M7 17 17 7M9 7h8v8" />
               </svg>
@@ -56,13 +55,6 @@
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                 <path d="M7 10l5 5 5-5" />
                 <path d="M12 15V3" />
-              </svg>
-            </a>
-            <a class="button button-secondary" href="https://ctfd.mvtp.cloud" target="_blank" rel="noreferrer noopener">
-              CTF
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
-                <path d="m9 12 2 2 4-4" />
               </svg>
             </a>
           </div>
@@ -95,7 +87,8 @@
           </div>
 
           <div class="service-grid">
-            <a class="service-card" href="https://rice.mvtp.cloud" target="_blank" rel="noreferrer noopener">
+            <a class="service-card" href="https://rice.mvtp.cloud" target="_blank" rel="noreferrer noopener" data-service-id="rice">
+              <span class="service-status" data-service-status>운영중</span>
               <span class="service-icon service-icon-amber">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M4 3h16" />
@@ -111,7 +104,8 @@
               </span>
             </a>
 
-            <a class="service-card" href="https://english.mvtp.cloud" target="_blank" rel="noreferrer noopener">
+            <a class="service-card" href="https://english.mvtp.cloud" target="_blank" rel="noreferrer noopener" data-service-id="english">
+              <span class="service-status" data-service-status>운영중</span>
               <span class="service-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="m5 8 6 6" />
@@ -129,7 +123,8 @@
               </span>
             </a>
 
-            <a class="service-card" href="https://japan.mvtp.cloud" target="_blank" rel="noreferrer noopener">
+            <a class="service-card" href="https://japan.mvtp.cloud" target="_blank" rel="noreferrer noopener" data-service-id="japan">
+              <span class="service-status" data-service-status>운영중</span>
               <span class="service-icon service-icon-blue">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <circle cx="12" cy="12" r="10" />
@@ -145,7 +140,8 @@
               </span>
             </a>
 
-            <a class="service-card" href="https://login.mvtp.cloud" target="_blank" rel="noreferrer noopener">
+            <a class="service-card" href="https://login.mvtp.cloud" target="_blank" rel="noreferrer noopener" data-service-id="login">
+              <span class="service-status" data-service-status>운영중</span>
               <span class="service-icon service-icon-amber">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M15 7a2 2 0 1 0 2 2" />
@@ -160,7 +156,8 @@
               </span>
             </a>
 
-            <a class="service-card" href="https://c.mvtp.cloud" target="_blank" rel="noreferrer noopener">
+            <a class="service-card" href="https://c.mvtp.cloud" target="_blank" rel="noreferrer noopener" data-service-id="c-compiler">
+              <span class="service-status" data-service-status>운영중</span>
               <span class="service-icon service-icon-code">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="m16 18 6-6-6-6" />
@@ -175,7 +172,8 @@
               </span>
             </a>
 
-            <a class="service-card" href="https://medas.mvtp.cloud" target="_blank" rel="noreferrer noopener">
+            <a class="service-card" href="https://medas.mvtp.cloud" target="_blank" rel="noreferrer noopener" data-service-id="medas">
+              <span class="service-status" data-service-status>운영중</span>
               <span class="service-icon service-icon-blue">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M4 4h16v16H4z" />
@@ -191,7 +189,8 @@
               </span>
             </a>
 
-            <a class="service-card" href="downloads.html">
+            <a class="service-card" href="downloads.html" data-service-id="downloads">
+              <span class="service-status" data-service-status>운영중</span>
               <span class="service-icon service-icon-coral">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
@@ -207,7 +206,8 @@
               </span>
             </a>
 
-            <a class="service-card" href="https://hsoc.mvtp.cloud" target="_blank" rel="noreferrer noopener">
+            <a class="service-card" href="https://hsoc.mvtp.cloud" target="_blank" rel="noreferrer noopener" data-service-id="hsoc">
+              <span class="service-status" data-service-status>운영중</span>
               <span class="service-icon service-icon-coral">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
@@ -221,7 +221,8 @@
               </span>
             </a>
 
-            <a class="service-card" href="https://ctfd.mvtp.cloud" target="_blank" rel="noreferrer noopener">
+            <a class="service-card" href="https://ctfd.mvtp.cloud" target="_blank" rel="noreferrer noopener" data-service-id="ctf">
+              <span class="service-status" data-service-status>운영중</span>
               <span class="service-icon service-icon-code">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
@@ -233,6 +234,41 @@
                 <strong>CTF</strong>
                 <span>CTF 문제 풀이와 대회 운영을 위한 CTFd 플랫폼입니다.</span>
                 <em>ctfd.mvtp.cloud</em>
+              </span>
+            </a>
+
+            <a class="service-card" href="https://network.mvtp.cloud" target="_blank" rel="noreferrer noopener" data-service-id="network">
+              <span class="service-status" data-service-status>운영중</span>
+              <span class="service-icon service-icon-blue">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="8.5" y="14" width="7" height="7" rx="1" />
+                  <path d="M10 6.5h4" />
+                  <path d="m8.5 14-2-4" />
+                  <path d="m15.5 14 2-4" />
+                </svg>
+              </span>
+              <span class="service-copy">
+                <strong>Network Lab</strong>
+                <span>웹에서 Cisco Packet Tracer와 비슷한 방식으로 네트워크 실습을 할 수 있는 서비스입니다.</span>
+                <em>network.mvtp.cloud</em>
+              </span>
+            </a>
+
+            <a class="service-card" href="https://chat.mvtp.cloud" target="_blank" rel="noreferrer noopener" data-service-id="chat">
+              <span class="service-status" data-service-status>운영중</span>
+              <span class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z" />
+                  <path d="M8 9h8" />
+                  <path d="M8 13h5" />
+                </svg>
+              </span>
+              <span class="service-copy">
+                <strong>Chat</strong>
+                <span>방을 만들어 사람들과 대화할 수 있는 실시간 대화 서비스입니다.</span>
+                <em>chat.mvtp.cloud</em>
               </span>
             </a>
           </div>
@@ -326,8 +362,8 @@
             <h2>운영자 정보</h2>
             <p>개인 정보 페이지는 별도 라우트로 준비되어 있고, 실제 내용은 나중에 채워 넣을 수 있습니다.</p>
           </div>
-          <a class="button button-dark" href="about.html">
-            내 정보 페이지
+          <a class="button button-dark" href="/profile">
+            프로필 페이지
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="m9 18 6-6-6-6" />
             </svg>
