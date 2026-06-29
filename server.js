@@ -55,6 +55,7 @@ const defaultSiteContent = {
   serviceStatuses: [
     { id: "hansei", name: "Hansei", status: "운영중", state: "online" },
     { id: "rice", name: "Rice", status: "운영중", state: "online" },
+    { id: "calendar", name: "Calendar", status: "운영중", state: "online" },
     { id: "english", name: "English", status: "운영중", state: "online" },
     { id: "japan", name: "Japan", status: "운영중", state: "online" },
     { id: "login", name: "Login", status: "운영중", state: "online" },

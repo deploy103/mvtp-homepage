@@ -13,6 +13,12 @@
       "state": "online"
     },
     {
+      "id": "calendar",
+      "name": "Calendar",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
       "id": "english",
       "name": "English",
       "status": "운영중",
