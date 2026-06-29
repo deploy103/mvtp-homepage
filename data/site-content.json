@@ -1,6 +1,12 @@
 {
   "serviceStatuses": [
     {
+      "id": "hansei",
+      "name": "HanSei Links",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
       "id": "rice",
       "name": "Rice",
       "status": "운영중",

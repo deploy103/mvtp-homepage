@@ -53,6 +53,7 @@ const statusStates = new Set(["online", "warning", "offline", "neutral"]);
 
 const defaultSiteContent = {
   serviceStatuses: [
+    { id: "hansei", name: "HanSei Links", status: "운영중", state: "online" },
     { id: "rice", name: "Rice", status: "운영중", state: "online" },
     { id: "english", name: "English", status: "운영중", state: "online" },
     { id: "japan", name: "Japan", status: "운영중", state: "online" },
