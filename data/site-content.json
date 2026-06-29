@@ -2,7 +2,7 @@
   "serviceStatuses": [
     {
       "id": "hansei",
-      "name": "Hansei",
+      "name": "School Links",
       "status": "운영중",
       "state": "online"
     },
