@@ -1,6 +1,6 @@
-# MVTP Homepage
+# HanSei Links
 
-MVTP 개인 서버 랜딩 페이지입니다. 외부 의존성 없이 Node 기본 모듈로 정적 파일과 `/api/uptime`을 제공합니다.
+hansei.mvtp.cloud에서 운영하는 한세 관련 사이트 바로가기 허브입니다. 외부 의존성 없이 Node 기본 모듈로 정적 파일, `/api/uptime`, `/api/site-content`를 제공합니다.
 
 ## Run
 

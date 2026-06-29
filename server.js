@@ -67,11 +67,11 @@ const defaultSiteContent = {
   ],
   activities: [
     { name: "한세사이버보안고등학교 31기" },
-    { name: "HanSei Dev Ops 차장" },
+    { name: "HanSei DevOps 차장" },
     { name: "HsShell 차장" },
     { name: "HS-CTF Team" },
     { name: "한세 기능부 부원" },
-    { name: "교내해커톤 한세톤 생활 부문 우승" },
+    { name: "교내 해커톤 한세톤 생활 부문 우승" },
   ],
 };
 
@@ -617,5 +617,5 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(PORT, HOST, () => {
-  console.log(`MVTP homepage running at http://${HOST}:${PORT}`);
+  console.log(`HanSei Links running at http://${HOST}:${PORT}`);
 });

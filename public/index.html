@@ -5,48 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="MVTP 서버와 서비스로 이동할 수 있는 개인 홈랩 랜딩 페이지입니다."
+      content="hansei.mvtp.cloud에서 한세 관련 운영 사이트를 한곳에서 확인하고 이동할 수 있는 바로가기 허브입니다."
     />
-    <title>MVTP Cloud</title>
+    <title>HanSei Links</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260622-3" />
-    <script defer src="main.js?v=20260622-3"></script>
+    <link rel="stylesheet" href="styles.css?v=20260629-1" />
+    <script defer src="main.js?v=20260629-1"></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="MVTP Cloud home">
-        <span class="brand-mark">M</span>
-        <span>MVTP Cloud</span>
+      <a class="brand" href="#top" aria-label="HanSei Links home">
+        <span class="brand-mark">H</span>
+        <span>HanSei Links</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#sites">사이트</a>
+        <a href="#sites">바로가기</a>
         <a href="downloads.html">자료실</a>
-        <a href="#hardware">장비</a>
+        <a href="#guide">운영안내</a>
         <a href="/profile">프로필</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero" id="top" aria-label="MVTP Cloud">
+      <section class="hero" id="top" aria-label="HanSei Links">
         <div class="hero-backdrop" aria-hidden="true"></div>
         <div class="hero-content">
-          <p class="eyebrow">Personal cloud and home lab</p>
-          <h1>MVTP Cloud</h1>
+          <p class="eyebrow">Hansei service hub</p>
+          <h1>HanSei Links</h1>
           <p class="hero-copy">
-            MVTP 서버에서 운영되는 서비스, 노드 장비, 현재 Ubuntu 업타임을 한 화면에서 확인하는 홈랩 랜딩
-            페이지입니다.
+            한세 관련 학습, 보안, 개발 서비스를 한 화면에서 확인하고 바로 이동할 수 있는
+            hansei.mvtp.cloud 바로가기 페이지입니다.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#sites">
-              사이트로 이동하기
+              운영 사이트 보기
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 5v14m0 0 6-6m-6 6-6-6" />
-              </svg>
-            </a>
-            <a class="button button-secondary" href="/profile">
-              프로필
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M7 17 17 7M9 7h8v8" />
               </svg>
             </a>
             <a class="button button-secondary" href="downloads.html">
@@ -57,6 +51,12 @@
                 <path d="M12 15V3" />
               </svg>
             </a>
+            <a class="button button-secondary" href="/profile">
+              운영자 프로필
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M9 7h8v8" />
+              </svg>
+            </a>
           </div>
 
           <div class="uptime-panel" role="status" aria-live="polite">
@@ -64,7 +64,7 @@
               <path d="M22 12h-4l-3 8-6-16-3 8H2" />
             </svg>
             <div>
-              <span class="eyebrow">Ubuntu server uptime</span>
+              <span class="eyebrow">Service server uptime</span>
               <strong data-uptime-live>측정 중</strong>
             </div>
             <div class="uptime-meta">
@@ -81,9 +81,9 @@
       <section class="section section-services" id="sites">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="eyebrow">Quick links</p>
-            <h2>사이트로 이동하기</h2>
-            <p>MVTP에서 운영 중인 주요 서브도메인과 공개 자료입니다.</p>
+            <p class="eyebrow">Hansei quick links</p>
+            <h2>운영 중인 한세 사이트</h2>
+            <p>학습, 보안, 개발 실습과 내부 도구로 연결되는 바로가기입니다.</p>
           </div>
 
           <div class="service-grid">
@@ -99,7 +99,7 @@
               </span>
               <span class="service-copy">
                 <strong>Rice</strong>
-                <span>오늘의 급식을 빠르게 확인할 수 있는 급식 안내 사이트입니다.</span>
+                <span>한세 학생들이 오늘의 급식을 빠르게 확인할 수 있는 안내 사이트입니다.</span>
                 <em>rice.mvtp.cloud</em>
               </span>
             </a>
@@ -118,7 +118,7 @@
               </span>
               <span class="service-copy">
                 <strong>English</strong>
-                <span>영어 단어를 암기할 때 효율적으로 공부를 도와주는 사이트입니다.</span>
+                <span>영어 단어 학습과 암기를 돕는 한세 학습용 사이트입니다.</span>
                 <em>english.mvtp.cloud</em>
               </span>
             </a>
@@ -135,7 +135,7 @@
               </span>
               <span class="service-copy">
                 <strong>Japan</strong>
-                <span>일본어 학습 플랫폼입니다.</span>
+                <span>일본어 학습 자료와 연습을 모아둔 학습 사이트입니다.</span>
                 <em>japan.mvtp.cloud</em>
               </span>
             </a>
@@ -151,7 +151,7 @@
               </span>
               <span class="service-copy">
                 <strong>Login</strong>
-                <span>계정 인증과 내부 서비스 접근을 위한 로그인 서비스</span>
+                <span>한세 관련 내부 서비스 접속을 위한 계정 인증 페이지입니다.</span>
                 <em>login.mvtp.cloud</em>
               </span>
             </a>
@@ -167,7 +167,7 @@
               </span>
               <span class="service-copy">
                 <strong>C Compiler</strong>
-                <span>Web C Compiler 서비스 입니다.</span>
+                <span>브라우저에서 C 코드를 작성하고 실행해 볼 수 있는 실습용 컴파일러입니다.</span>
                 <em>c.mvtp.cloud</em>
               </span>
             </a>
@@ -184,7 +184,7 @@
               </span>
               <span class="service-copy">
                 <strong>Medas</strong>
-                <span>파일 보관, 선택 공유, 개인 메모를 함께 관리하는 프라이빗 페이지입니다.</span>
+                <span>파일 보관, 공유, 개인 메모를 함께 관리하는 내부 도구입니다.</span>
                 <em>medas.mvtp.cloud</em>
               </span>
             </a>
@@ -201,7 +201,7 @@
               </span>
               <span class="service-copy">
                 <strong>자료실</strong>
-                <span>MVTP에서 공개하는 실행 파일과 자료를 내려받을 수 있습니다.</span>
+                <span>한세 관련 프로그램과 공개 자료를 내려받을 수 있는 공간입니다.</span>
                 <em>downloads</em>
               </span>
             </a>
@@ -216,7 +216,7 @@
               </span>
               <span class="service-copy">
                 <strong>HSOC</strong>
-                <span>HSOC관련 홈페이지</span>
+                <span>한세 사이버보안 활동과 HSOC 관련 소식을 모아둔 홈페이지입니다.</span>
                 <em>hsoc.mvtp.cloud</em>
               </span>
             </a>
@@ -232,7 +232,7 @@
               </span>
               <span class="service-copy">
                 <strong>CTF</strong>
-                <span>CTF 문제 풀이와 대회 운영을 위한 CTFd 플랫폼입니다.</span>
+                <span>CTF 문제 풀이와 대회 운영을 위한 한세 보안 실습 플랫폼입니다.</span>
                 <em>ctfd.mvtp.cloud</em>
               </span>
             </a>
@@ -251,7 +251,7 @@
               </span>
               <span class="service-copy">
                 <strong>Network Lab</strong>
-                <span>웹에서 Cisco Packet Tracer와 비슷한 방식으로 네트워크 실습을 할 수 있는 서비스입니다.</span>
+                <span>브라우저에서 네트워크 구성을 실습할 수 있는 한세 네트워크 랩입니다.</span>
                 <em>network.mvtp.cloud</em>
               </span>
             </a>
@@ -267,7 +267,7 @@
               </span>
               <span class="service-copy">
                 <strong>Chat</strong>
-                <span>방을 만들어 사람들과 대화할 수 있는 실시간 대화 서비스입니다.</span>
+                <span>프로젝트나 스터디별 방을 만들어 대화하는 실시간 채팅 서비스입니다.</span>
                 <em>chat.mvtp.cloud</em>
               </span>
             </a>
@@ -275,12 +275,12 @@
         </div>
       </section>
 
-      <section class="section section-hardware" id="hardware">
+      <section class="section section-hardware" id="guide">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="eyebrow">Hardware inventory</p>
-            <h2>서버 장비 소개</h2>
-            <p>MVTP 인프라를 구성하는 메인 노드, 보조 노드, 고자원 작업용 Server 3 사양입니다.</p>
+            <p class="eyebrow">Operation guide</p>
+            <h2>운영 안내</h2>
+            <p>각 서비스의 운영 상태와 공개 범위를 기준으로 바로가기를 정리합니다.</p>
           </div>
 
           <div class="hardware-grid">
@@ -292,18 +292,15 @@
                   <path d="M7 8h.01M7 16h.01" />
                 </svg>
                 <div>
-                  <p>Main Node</p>
-                  <h3>Server 1</h3>
+                  <p>Status</p>
+                  <h3>상태 표시</h3>
                 </div>
               </div>
-              <p class="hardware-summary">MVTP의 메인 노드로 서비스 라우팅과 핵심 워크로드를 담당합니다.</p>
-              <div class="spec-list">
-                <div class="spec-row"><span>CPU</span><strong>Intel Core i3-12100 (Cores: 4, Threads: 8)</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>Main Board</span><strong>ASUSTeK COMPUTER INC. PRIME H610M-K D4</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>RAM</span><strong>Samsung DDR4 8GB (UDIMM)</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>GPU</span><strong>Intel(R) UHD Graphics 730</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>SSD</span><strong>500GB</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>LAN Card</span><strong>ipTIME PX1000SE Giga Bit LAN Card</strong><em class="badge badge-neutral">-</em></div>
+              <p class="hardware-summary">카드 우측 상단의 배지로 운영 상태를 확인할 수 있습니다.</p>
+              <div class="guide-list">
+                <span>운영중</span>
+                <span>점검중</span>
+                <span>중단</span>
               </div>
             </article>
 
@@ -315,18 +312,15 @@
                   <path d="M7 8h.01M7 16h.01" />
                 </svg>
                 <div>
-                  <p>Node</p>
-                  <h3>Server 2</h3>
+                  <p>Access</p>
+                  <h3>접속 기준</h3>
                 </div>
               </div>
-              <p class="hardware-summary">보조 노드로 분산 작업과 테스트성 서비스를 받쳐주는 장비입니다.</p>
-              <div class="spec-list">
-                <div class="spec-row"><span>CPU</span><strong>Intel Core i3-6100T @ 3.20GHz (Cores: 2, Threads: 4)</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>Main Board</span><strong>HP 829A</strong><em class="badge badge-locked">불가능</em></div>
-                <div class="spec-row"><span>RAM</span><strong>Samsung DDR4 4GB x 2 (SO-DIMM)</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>GPU</span><strong>Intel(R) HD Graphics 530 (Revision: 6, Memory: 128MB)</strong><em class="badge badge-locked">불가능</em></div>
-                <div class="spec-row"><span>SSD</span><strong>ROIPLE DOVE 256GB</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>LAN Card</span><strong>Intel(R) Ethernet Connection (5) I219-LM</strong><em class="badge badge-locked">불가능</em></div>
+              <p class="hardware-summary">정상 운영 중인 서비스는 바로 열리고, 점검 또는 중단 상태의 서비스는 이동이 제한됩니다.</p>
+              <div class="guide-list">
+                <span>새 탭 이동</span>
+                <span>상태 연동</span>
+                <span>인증 서비스 분리</span>
               </div>
             </article>
 
@@ -337,18 +331,15 @@
                   <path d="M8 21h8M12 17v4" />
                 </svg>
                 <div>
-                  <p>High Load Node</p>
-                  <h3>Server 3</h3>
+                  <p>Scope</p>
+                  <h3>운영 범위</h3>
                 </div>
               </div>
-              <p class="hardware-summary">CPU, GPU, 메모리 자원이 많이 필요한 작업을 처리하는 고성능 노드입니다.</p>
-              <div class="spec-list">
-                <div class="spec-row"><span>CPU</span><strong>Intel Core i5-10400F @ 2.90GHz (Cores: 6, Threads: 12)</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>Main Board</span><strong>BIOSTAR Group H510MH 2.0</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>RAM</span><strong>Samsung DDR4 8GB x 2 (UDIMM)</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>GPU</span><strong>AMD Radeon RX 6600</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>SSD</span><strong>SAMSUNG MZVL2512HCJQ-00800 500GB</strong><em class="badge badge-good">가능</em></div>
-                <div class="spec-row"><span>LAN Card</span><strong>Intel(R) Ethernet Connection (14) I219-V</strong><em class="badge badge-good">가능</em></div>
+              <p class="hardware-summary">한세 학습, 보안 활동, 개발 실습에 필요한 공개 서비스와 자료를 중심으로 연결합니다.</p>
+              <div class="guide-list">
+                <span>학습</span>
+                <span>보안</span>
+                <span>개발</span>
               </div>
             </article>
           </div>
@@ -358,9 +349,9 @@
       <section class="section section-owner">
         <div class="section-inner owner-band">
           <div>
-            <p class="eyebrow">Profile</p>
+            <p class="eyebrow">Operator</p>
             <h2>운영자 정보</h2>
-            <p>개인 정보 페이지는 별도 라우트로 준비되어 있고, 실제 내용은 나중에 채워 넣을 수 있습니다.</p>
+            <p>한세 관련 서비스 운영자 정보와 활동 내역은 프로필 페이지에서 확인할 수 있습니다.</p>
           </div>
           <a class="button button-dark" href="/profile">
             프로필 페이지
@@ -373,8 +364,8 @@
     </main>
 
     <footer class="site-footer">
-      <span>MVTP Cloud</span>
-      <span>Landing page for personal server infrastructure.</span>
+      <span>hansei.mvtp.cloud</span>
+      <span>한세 관련 운영 사이트 바로가기</span>
     </footer>
   </body>
 </html>

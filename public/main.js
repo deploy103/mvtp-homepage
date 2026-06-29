@@ -5,6 +5,19 @@ const activityList = document.querySelector("[data-activity-list]");
 
 let snapshot = null;
 
+serviceCards.forEach((card) => {
+  const href = card.getAttribute("href");
+
+  if (href) card.dataset.serviceHref = href;
+
+  card.addEventListener("click", (event) => {
+    if (card.dataset.serviceState && card.dataset.serviceState !== "online") {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  });
+});
+
 function formatDuration(totalSeconds) {
   const seconds = Math.max(0, Math.floor(totalSeconds));
   const days = Math.floor(seconds / 86400);
@@ -58,8 +71,27 @@ function renderServiceStatuses(services = []) {
 
     if (!service || !status) return;
 
+    const state = service.state || "neutral";
+    const isOnline = state === "online";
+
     status.textContent = service.status;
-    status.className = `service-status service-status-${service.state || "neutral"}`;
+    status.className = `service-status service-status-${state}`;
+
+    card.dataset.serviceState = state;
+    card.classList.toggle("service-card-disabled", !isOnline);
+
+    if (isOnline) {
+      if (card.dataset.serviceHref) card.setAttribute("href", card.dataset.serviceHref);
+      card.removeAttribute("aria-disabled");
+      card.removeAttribute("tabindex");
+      card.removeAttribute("title");
+      return;
+    }
+
+    card.removeAttribute("href");
+    card.setAttribute("aria-disabled", "true");
+    card.setAttribute("tabindex", "-1");
+    card.setAttribute("title", "현재 정상 상태가 아니라 이동할 수 없습니다.");
   });
 }
 

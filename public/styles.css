@@ -373,6 +373,20 @@ h3 {
   transform: translateY(-2px);
 }
 
+.service-card-disabled,
+.service-card-disabled:hover,
+.service-card-disabled:focus-visible {
+  border-color: var(--line);
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.66;
+  transform: none;
+}
+
+.service-card-disabled .service-copy em {
+  color: var(--muted);
+}
+
 .service-icon {
   align-items: center;
   background: rgba(51, 214, 155, 0.1);
@@ -524,6 +538,25 @@ h3 {
 .spec-list {
   display: grid;
   gap: 10px;
+}
+
+.guide-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.guide-list span {
+  background: #101713;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--green-dark);
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 900;
+  min-height: 32px;
+  padding: 7px 12px;
 }
 
 .spec-row {
