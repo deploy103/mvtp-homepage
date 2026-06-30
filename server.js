@@ -62,6 +62,7 @@ const defaultSiteContent = {
     { id: "c-compiler", name: "C Compiler", status: "운영중", state: "online" },
     { id: "medas", name: "Medas", status: "운영중", state: "online" },
     { id: "downloads", name: "자료실", status: "운영중", state: "online" },
+    { id: "file", name: "File Converter", status: "운영중", state: "online" },
     { id: "hsoc", name: "HSOC", status: "운영중", state: "online" },
     { id: "ctf", name: "CTF", status: "운영중", state: "online" },
     { id: "network", name: "Network Lab", status: "운영중", state: "online" },
