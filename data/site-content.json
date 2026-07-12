@@ -61,6 +61,12 @@
       "state": "online"
     },
     {
+      "id": "data",
+      "name": "Data Analytics",
+      "status": "운영중",
+      "state": "online"
+    },
+    {
       "id": "hsoc",
       "name": "HSOC",
       "status": "운영중",
