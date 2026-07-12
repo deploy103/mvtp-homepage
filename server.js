@@ -90,6 +90,7 @@ const mimeTypes = {
   ".svg": "image/svg+xml",
   ".webp": "image/webp",
   ".ico": "image/x-icon",
+  ".zip": "application/zip",
   ".exe": "application/vnd.microsoft.portable-executable",
 };
 
