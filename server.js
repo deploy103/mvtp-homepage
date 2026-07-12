@@ -51,6 +51,13 @@ const ADMIN_SESSION_SECRET =
 
 const statusStates = new Set(["online", "warning", "offline", "neutral"]);
 
+const cleanUrlRedirects = new Map([
+  ["/index.html", "/"],
+  ["/about.html", "/about"],
+  ["/downloads.html", "/downloads"],
+  ["/adminpage.html", "/adminpage"],
+]);
+
 const defaultSiteContent = {
   serviceStatuses: [
     { id: "hansei", name: "School Links", status: "운영중", state: "online" },
@@ -603,6 +610,15 @@ const server = http.createServer(async (req, res) => {
 
     if (url.pathname === "/api/site-content") {
       await handleSiteContent(req, res);
+      return;
+    }
+
+    const cleanUrl = cleanUrlRedirects.get(url.pathname);
+    if (cleanUrl) {
+      send(res, 301, "", {
+        Location: `${cleanUrl}${url.search}`,
+        "Cache-Control": "no-store, max-age=0",
+      });
       return;
     }
 
