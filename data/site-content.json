@@ -89,6 +89,12 @@
       "name": "Chat",
       "status": "운영중",
       "state": "online"
+    },
+    {
+      "id": "flow",
+      "name": "Flow",
+      "status": "운영중",
+      "state": "online"
     }
   ],
   "activities": [

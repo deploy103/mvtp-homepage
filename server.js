@@ -75,6 +75,7 @@ const defaultSiteContent = {
     { id: "ctf", name: "CTF", status: "운영중", state: "online" },
     { id: "network", name: "Network Lab", status: "운영중", state: "online" },
     { id: "chat", name: "Chat", status: "운영중", state: "online" },
+    { id: "flow", name: "Flow", status: "운영중", state: "online" },
   ],
   activities: [
     { name: "한세사이버보안고등학교 31기" },
