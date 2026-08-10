@@ -1,0 +1,30 @@
+services:
+  mvtp-homepage:
+    build:
+      context: .
+    restart: unless-stopped
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      HOST: 0.0.0.0
+      PORT: "8007"
+      COOKIE_SECURE: ${COOKIE_SECURE:-true}
+    expose:
+      - "8007"
+    volumes:
+      - type: bind
+        source: ./data
+        target: /app/data
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8007/api/uptime').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - mvtp-web-net
+
+networks:
+  mvtp-web-net:
+    external: true
