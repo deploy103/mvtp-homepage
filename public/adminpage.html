@@ -3,77 +3,191 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="MVTP Cloud 콘텐츠 관리 페이지입니다." />
-    <title>Admin Page | MVTP Cloud</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260629-1" />
-    <script defer src="admin.js?v=20260629-1"></script>
+    <meta name="description" content="MVTP Cloud 콘텐츠 관리" />
+    <meta name="theme-color" content="#080b10" />
+    <title>CMS | MVTP Cloud</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css?v=20260824" />
+    <link rel="stylesheet" href="/admin.css?v=20260824" />
+    <script defer src="/admin.js?v=20260824"></script>
   </head>
-  <body class="profile-body admin-body">
-    <main class="admin-page">
-      <header class="admin-hero">
-        <div>
-          <p class="eyebrow">Admin page</p>
-          <h1>콘텐츠 관리</h1>
-          <p>메인 서비스 상태와 프로필 활동 내역을 수정합니다.</p>
+  <body class="admin-body">
+    <a class="skip-link" href="#admin-content">관리 화면으로 건너뛰기</a>
+    <div class="admin-shell">
+      <aside class="admin-sidebar" data-admin-sidebar>
+        <div class="admin-brand">
+          <a class="brand" href="/" target="_blank" rel="noreferrer">
+            <span class="brand-mark">M</span><span class="brand-label">MVTP CMS</span>
+          </a>
+          <button class="admin-sidebar-close" type="button" aria-label="메뉴 닫기" data-sidebar-close>×</button>
         </div>
-        <a class="button button-secondary profile-back" href="/">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m12 19-7-7 7-7" />
-            <path d="M19 12H5" />
-          </svg>
-          홈으로
-        </a>
-        <button class="button button-secondary profile-back" type="button" data-admin-logout>
-          로그아웃
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-            <path d="m16 17 5-5-5-5" />
-            <path d="M21 12H9" />
-          </svg>
-        </button>
-      </header>
-
-      <form class="admin-layout" data-admin-form>
-        <section class="admin-panel" aria-labelledby="server-status-title">
-          <div class="admin-panel-heading">
-            <div>
-              <p class="eyebrow">Server status</p>
-              <h2 id="server-status-title">서비스 상태</h2>
-            </div>
-            <span data-save-status>불러오는 중</span>
-          </div>
-          <div class="admin-service-list" data-service-editor></div>
-        </section>
-
-        <section class="admin-panel" aria-labelledby="activities-title">
-          <div class="admin-panel-heading">
-            <div>
-              <p class="eyebrow">Activities</p>
-              <h2 id="activities-title">활동 내역</h2>
-            </div>
-            <button class="button button-secondary admin-small-button" type="button" data-add-activity>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5 12h14" />
-                <path d="M12 5v14" />
-              </svg>
-              추가
-            </button>
-          </div>
-          <div class="admin-activity-list" data-activity-editor></div>
-        </section>
-
-        <div class="admin-save-bar">
-          <button class="button button-primary" type="submit">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z" />
-              <path d="M17 21v-8H7v8" />
-              <path d="M7 3v5h8" />
-            </svg>
-            저장하기
-          </button>
+        <nav class="admin-nav" aria-label="관리 메뉴">
+          <button type="button" data-view="dashboard"><span>01</span>Dashboard</button>
+          <button type="button" data-view="site"><span>02</span>Site & SEO</button>
+          <button type="button" data-view="profile"><span>03</span>Profile</button>
+          <button type="button" data-view="links"><span>04</span>Links</button>
+          <button type="button" data-view="skills"><span>05</span>Skills</button>
+          <button type="button" data-view="projects"><span>06</span>Projects</button>
+          <button type="button" data-view="activities"><span>07</span>Activities</button>
+          <button type="button" data-view="sections"><span>08</span>Sections</button>
+          <button type="button" data-view="operations"><span>09</span>Operation guide</button>
+          <button type="button" data-view="downloads"><span>10</span>Downloads</button>
+          <button type="button" data-view="media"><span>11</span>Media</button>
+        </nav>
+        <div class="admin-sidebar-footer">
+          <a href="/" target="_blank" rel="noreferrer">공개 사이트 열기 ↗</a>
+          <button type="button" data-admin-logout>로그아웃</button>
         </div>
-      </form>
-    </main>
+      </aside>
+
+      <div class="admin-workspace">
+        <header class="admin-topbar">
+          <button class="admin-menu-button" type="button" aria-label="관리 메뉴 열기" data-sidebar-open>Menu</button>
+          <div>
+            <p class="admin-breadcrumb">MVTP / CONTENT</p>
+            <h1 data-panel-title>Dashboard</h1>
+          </div>
+          <div class="admin-save-actions">
+            <span class="admin-save-status" role="status" aria-live="polite" data-save-status>불러오는 중</span>
+            <button class="button button-primary" type="button" data-save-content disabled>변경사항 저장</button>
+          </div>
+        </header>
+
+        <main id="admin-content" class="admin-content" aria-busy="true" data-admin-content>
+          <section class="admin-view" data-panel="dashboard">
+            <div class="admin-view-heading">
+              <div><p class="eyebrow">Overview</p><h2>콘텐츠 현황</h2></div>
+              <p>실제 공개 데이터와 최근 수정 정보를 확인합니다.</p>
+            </div>
+            <div class="dashboard-grid" data-dashboard-stats></div>
+            <article class="admin-card dashboard-update">
+              <span>Last updated</span>
+              <strong data-dashboard-updated>—</strong>
+              <p data-dashboard-revision>Revision —</p>
+            </article>
+          </section>
+
+          <section class="admin-view" data-panel="site" hidden>
+            <div class="admin-view-heading">
+              <div><p class="eyebrow">Site & SEO</p><h2>사이트 기본 설정</h2></div>
+              <p>브랜드, 검색 결과, 공유 이미지와 Footer 정보를 관리합니다.</p>
+            </div>
+            <div class="admin-form-grid">
+              <label><span>사이트 이름</span><input type="text" maxlength="160" data-bind="site.siteName" required /></label>
+              <label><span>짧은 브랜드명</span><input type="text" maxlength="40" data-bind="site.brandText" required /></label>
+              <label class="field-wide"><span>사이트 제목</span><input type="text" maxlength="180" data-bind="site.title" required /></label>
+              <label class="field-wide"><span>사이트 소개</span><textarea rows="3" maxlength="1200" data-bind="site.description"></textarea></label>
+              <label class="field-wide"><span>SEO Title</span><input type="text" maxlength="180" data-bind="site.seoTitle" /></label>
+              <label class="field-wide"><span>SEO Description</span><textarea rows="3" maxlength="320" data-bind="site.seoDescription"></textarea></label>
+              <label><span>대표 이메일</span><input type="email" maxlength="240" data-bind="site.email" /></label>
+              <label><span>Footer 문구</span><input type="text" maxlength="240" data-bind="site.footerText" /></label>
+              <div class="field-wide image-binding" data-static-image="site.logoImage" data-label="Logo image"></div>
+              <div class="field-wide image-binding" data-static-image="site.favicon" data-label="Favicon"></div>
+              <div class="field-wide image-binding" data-static-image="site.ogImage" data-label="OG image"></div>
+            </div>
+          </section>
+
+          <section class="admin-view" data-panel="profile" hidden>
+            <div class="admin-view-heading">
+              <div><p class="eyebrow">Identity</p><h2>프로필과 소개</h2></div>
+              <p>Hero와 About에 표시되는 인물 정보를 관리합니다.</p>
+            </div>
+            <div class="admin-form-grid">
+              <label><span>표시 이름</span><input type="text" maxlength="160" data-bind="profile.displayName" required /></label>
+              <label><span>영문 이름 / 닉네임</span><input type="text" maxlength="160" data-bind="profile.englishName" /></label>
+              <label><span>역할</span><input type="text" maxlength="160" data-bind="profile.role" /></label>
+              <label><span>활동 상태</span><input type="text" maxlength="180" data-bind="profile.availability" /></label>
+              <label class="field-wide"><span>한 줄 소개</span><textarea rows="2" maxlength="500" data-bind="profile.headline"></textarea></label>
+              <label class="field-wide"><span>짧은 소개</span><textarea rows="4" maxlength="1600" data-bind="profile.shortBio"></textarea></label>
+              <label class="field-wide"><span>About 제목</span><input type="text" maxlength="220" data-bind="profile.aboutTitle" /></label>
+              <label class="field-wide"><span>소개 문단 <small>문단마다 한 줄</small></span><textarea rows="7" maxlength="10000" data-bind-list="profile.aboutParagraphs"></textarea></label>
+              <label><span>강조 문구</span><input type="text" maxlength="180" data-bind="profile.highlight" /></label>
+              <label><span>학교</span><input type="text" maxlength="220" data-bind="profile.school" /></label>
+              <label><span>지역</span><input type="text" maxlength="180" data-bind="profile.location" /></label>
+              <label><span>이메일</span><input type="email" maxlength="240" data-bind="profile.email" /></label>
+              <label><span>전화번호</span><input type="tel" maxlength="80" data-bind="profile.phone" /></label>
+              <div class="field-wide image-binding" data-static-image="profile.profileImage" data-label="Profile image"></div>
+              <div class="field-wide image-binding" data-static-image="profile.heroImage" data-label="Hero image"></div>
+            </div>
+          </section>
+
+          <section class="admin-view" data-panel="links" hidden>
+            <div class="admin-view-heading collection-heading">
+              <div><p class="eyebrow">Social & Contact</p><h2>링크 관리</h2></div>
+              <button class="button button-secondary" type="button" data-add="socialLinks">링크 추가</button>
+            </div>
+            <div class="editor-list" data-collection="socialLinks"></div>
+          </section>
+
+          <section class="admin-view" data-panel="skills" hidden>
+            <div class="admin-view-heading collection-heading">
+              <div><p class="eyebrow">Capabilities</p><h2>Skills 관리</h2></div>
+              <button class="button button-secondary" type="button" data-add="skills">Skill 추가</button>
+            </div>
+            <div class="editor-list" data-collection="skills"></div>
+          </section>
+
+          <section class="admin-view" data-panel="projects" hidden>
+            <div class="admin-view-heading collection-heading">
+              <div><p class="eyebrow">Selected work</p><h2>프로젝트 관리</h2></div>
+              <button class="button button-secondary" type="button" data-add="projects">프로젝트 추가</button>
+            </div>
+            <p class="drag-help">핸들을 드래그하거나 화살표 버튼으로 공개 사이트의 표시 순서를 바꿀 수 있습니다.</p>
+            <div class="editor-list" data-collection="projects"></div>
+          </section>
+
+          <section class="admin-view" data-panel="activities" hidden>
+            <div class="admin-view-heading collection-heading">
+              <div><p class="eyebrow">Timeline</p><h2>활동 관리</h2></div>
+              <button class="button button-secondary" type="button" data-add="activities">활동 추가</button>
+            </div>
+            <p class="drag-help">날짜에서 연도가 자동 계산됩니다. 같은 연도의 항목은 이 목록 순서대로 공개됩니다.</p>
+            <div class="editor-list" data-collection="activities"></div>
+          </section>
+
+          <section class="admin-view" data-panel="sections" hidden>
+            <div class="admin-view-heading">
+              <div><p class="eyebrow">Page structure</p><h2>섹션 순서와 표시</h2></div>
+              <p>공개 홈의 주요 섹션을 정렬하거나 숨깁니다.</p>
+            </div>
+            <p class="drag-help">핸들을 드래그하거나 화살표 버튼으로 섹션 순서를 바꿀 수 있습니다.</p>
+            <div class="editor-list" data-collection="sections"></div>
+          </section>
+
+          <section class="admin-view" data-panel="downloads" hidden>
+            <div class="admin-view-heading collection-heading">
+              <div><p class="eyebrow">Download center</p><h2>자료실 콘텐츠</h2></div>
+              <button class="button button-secondary" type="button" data-add="downloads">항목 추가</button>
+            </div>
+            <div class="editor-list" data-collection="downloads"></div>
+          </section>
+
+          <section class="admin-view" data-panel="operations" hidden>
+            <div class="admin-view-heading collection-heading">
+              <div><p class="eyebrow">Operation guide</p><h2>운영 안내 관리</h2></div>
+              <button class="button button-secondary" type="button" data-add="operations">안내 추가</button>
+            </div>
+            <p class="drag-help">서비스 상태, 접속 기준, 운영 범위 등 공개 사이트 안내를 관리합니다.</p>
+            <div class="editor-list" data-collection="operations"></div>
+          </section>
+
+          <section class="admin-view" data-panel="media" hidden>
+            <div class="admin-view-heading">
+              <div><p class="eyebrow">Media library</p><h2>이미지 관리</h2></div>
+              <p>JPEG, PNG, WebP · 파일당 최대 8MB</p>
+            </div>
+            <div class="media-dropzone" tabindex="0" role="button" data-media-dropzone>
+              <input type="file" accept="image/jpeg,image/png,image/webp" multiple hidden data-media-input />
+              <strong>이미지를 이곳에 놓으세요.</strong>
+              <span>또는 클릭해서 파일을 선택합니다.</span>
+              <small>업로드 파일은 실제 형식과 이미지 크기를 서버에서 다시 검증합니다.</small>
+            </div>
+            <div class="media-progress" role="status" aria-live="polite" data-media-progress></div>
+            <div class="media-grid" data-media-grid></div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <div class="admin-toast" role="status" aria-live="polite" hidden data-admin-toast></div>
   </body>
 </html>

@@ -1,4 +1,3 @@
-
 .pypirc
 .netrc
 *.tfvars
@@ -21,13 +20,13 @@ Thumbs.db
 node_modules/
 .env
 .env.*
+!.env.example
 *.log
-.DS_Store
-Thumbs.db
 server.txt
 deploy/
-deploy/mvtp-homepage.service
-data/
+public/uploads/*
+!public/uploads/.gitkeep
+data/*.tmp
 uploads/
 storage/
 backups/

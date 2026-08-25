@@ -3,7 +3,7 @@
   "meta": {
     "revision": 1,
     "createdAt": "2026-08-24T00:00:00.000Z",
-    "updatedAt": "2026-08-24T02:12:55.236Z"
+    "updatedAt": "2026-08-24T00:00:00.000Z"
   },
   "site": {
     "siteName": "MVTP Cloud",
@@ -163,7 +163,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://hansei.mvtp.cloud/",
+      "demoUrl": "https://hansei.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -181,7 +181,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://rice.mvtp.cloud/",
+      "demoUrl": "https://rice.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -199,7 +199,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://cal.mvtp.cloud/",
+      "demoUrl": "https://cal.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -217,7 +217,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://english.mvtp.cloud/",
+      "demoUrl": "https://english.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -235,7 +235,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://japan.mvtp.cloud/",
+      "demoUrl": "https://japan.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -253,7 +253,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://login.mvtp.cloud/",
+      "demoUrl": "https://login.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -269,11 +269,9 @@
       "category": "Development",
       "startDate": "",
       "endDate": "",
-      "technologies": [
-        "C"
-      ],
+      "technologies": ["C"],
       "githubUrl": "",
-      "demoUrl": "https://c.mvtp.cloud/",
+      "demoUrl": "https://c.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -291,7 +289,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://medas.mvtp.cloud/",
+      "demoUrl": "https://medas.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -327,7 +325,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://file.mvtp.cloud/",
+      "demoUrl": "https://file.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -345,7 +343,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://data.mvtp.cloud/",
+      "demoUrl": "https://data.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -363,7 +361,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://hsoc.mvtp.cloud/",
+      "demoUrl": "https://hsoc.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -381,7 +379,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://ctfd.mvtp.cloud/",
+      "demoUrl": "https://ctfd.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -399,7 +397,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://network.mvtp.cloud/",
+      "demoUrl": "https://network.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -417,7 +415,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://chat.mvtp.cloud/",
+      "demoUrl": "https://chat.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -435,7 +433,7 @@
       "endDate": "",
       "technologies": [],
       "githubUrl": "",
-      "demoUrl": "https://flow.mvtp.cloud/",
+      "demoUrl": "https://flow.mvtp.cloud",
       "image": "",
       "status": "운영중",
       "state": "online",
@@ -616,11 +614,7 @@
       "eyebrow": "Status",
       "title": "상태 표시",
       "description": "카드 우측 상단의 배지로 운영 상태를 확인할 수 있습니다.",
-      "highlights": [
-        "운영중",
-        "점검중",
-        "중단"
-      ],
+      "highlights": ["운영중", "점검중", "중단"],
       "visible": true,
       "sortOrder": 0
     },
@@ -629,11 +623,7 @@
       "eyebrow": "Access",
       "title": "접속 기준",
       "description": "정상 운영 중인 서비스는 바로 열리고, 점검 또는 중단 상태의 서비스는 이동이 제한됩니다.",
-      "highlights": [
-        "새 탭 이동",
-        "상태 연동",
-        "인증 서비스 분리"
-      ],
+      "highlights": ["새 탭 이동", "상태 연동", "인증 서비스 분리"],
       "visible": true,
       "sortOrder": 1
     },
@@ -642,11 +632,7 @@
       "eyebrow": "Scope",
       "title": "운영 범위",
       "description": "학습, 보안 활동, 개발 실습에 필요한 공개 서비스와 자료를 중심으로 연결합니다.",
-      "highlights": [
-        "학습",
-        "보안",
-        "개발"
-      ],
+      "highlights": ["학습", "보안", "개발"],
       "visible": true,
       "sortOrder": 2
     }
@@ -662,24 +648,6 @@
       "sortOrder": 0
     },
     {
-      "id": "projects",
-      "label": "Services",
-      "eyebrow": "Services",
-      "title": "서비스",
-      "description": "개발하거나 운영 중인 사이트와 도구입니다.",
-      "visible": true,
-      "sortOrder": 1
-    },
-    {
-      "id": "activities",
-      "label": "Activities",
-      "eyebrow": "Activities",
-      "title": "활동 내역",
-      "description": "",
-      "visible": true,
-      "sortOrder": 2
-    },
-    {
       "id": "about",
       "label": "About",
       "eyebrow": "Profile",
@@ -687,15 +655,6 @@
       "description": "",
       "visible": true,
       "sortOrder": 3
-    },
-    {
-      "id": "contact",
-      "label": "Contact",
-      "eyebrow": "Contact",
-      "title": "연락처",
-      "description": "",
-      "visible": true,
-      "sortOrder": 4
     },
     {
       "id": "skills",
@@ -707,6 +666,15 @@
       "sortOrder": 5
     },
     {
+      "id": "projects",
+      "label": "Services",
+      "eyebrow": "Services",
+      "title": "서비스",
+      "description": "개발하거나 운영 중인 사이트와 도구입니다.",
+      "visible": true,
+      "sortOrder": 1
+    },
+    {
       "id": "operations",
       "label": "Guide",
       "eyebrow": "04 / Operation guide",
@@ -714,6 +682,24 @@
       "description": "각 서비스의 운영 상태와 공개 범위를 기준으로 바로가기를 정리합니다.",
       "visible": false,
       "sortOrder": 6
+    },
+    {
+      "id": "activities",
+      "label": "Activities",
+      "eyebrow": "Activities",
+      "title": "활동 내역",
+      "description": "",
+      "visible": true,
+      "sortOrder": 2
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "eyebrow": "Contact",
+      "title": "연락처",
+      "description": "",
+      "visible": true,
+      "sortOrder": 4
     }
   ],
   "media": [
@@ -727,8 +713,7 @@
       "height": 0,
       "alt": "서버 랙이 있는 데이터센터",
       "managed": false,
-      "createdAt": "2026-06-02T00:00:00.000Z",
-      "sortOrder": 0
+      "createdAt": "2026-06-02T00:00:00.000Z"
     },
     {
       "id": "legacy-favicon",
@@ -740,8 +725,7 @@
       "height": 0,
       "alt": "MVTP favicon",
       "managed": false,
-      "createdAt": "2026-06-02T00:00:00.000Z",
-      "sortOrder": 1
+      "createdAt": "2026-06-02T00:00:00.000Z"
     }
   ]
 }
