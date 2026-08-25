@@ -3,35 +3,35 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="MVTP Cloud 관리자 로그인 페이지입니다." />
+    <meta name="description" content="MVTP Cloud 관리자 로그인" />
+    <meta name="theme-color" content="#080b10" />
     <title>Admin Login | MVTP Cloud</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260629-1" />
-    <script defer src="admin-login.js?v=20260629-1"></script>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css?v=20260824" />
+    <link rel="stylesheet" href="/admin.css?v=20260824" />
+    <script defer src="/admin-login.js?v=20260824"></script>
   </head>
-  <body class="profile-body admin-body">
-    <main class="admin-login-page">
+  <body class="admin-login-body">
+    <main class="admin-login-shell">
+      <a class="brand" href="/">
+        <span class="brand-mark">M</span><span class="brand-label">MVTP Cloud</span>
+      </a>
       <form class="admin-login-card" data-admin-login-form>
-        <p class="eyebrow">Admin page</p>
-        <h1>관리자 로그인</h1>
+        <p class="eyebrow">Restricted area</p>
+        <h1>Content<br />Management</h1>
+        <p>관리자 계정으로 인증한 뒤 사이트 콘텐츠를 관리할 수 있습니다.</p>
         <label>
-          <span>ID</span>
-          <input type="text" name="id" autocomplete="username" required />
+          <span>Administrator ID</span>
+          <input type="text" name="id" autocomplete="username" maxlength="160" required autofocus />
         </label>
         <label>
           <span>Password</span>
-          <input type="password" name="password" autocomplete="current-password" required />
+          <input type="password" name="password" autocomplete="current-password" maxlength="1024" required />
         </label>
-        <button class="button button-primary" type="submit">
-          로그인
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
-            <path d="m10 17 5-5-5-5" />
-            <path d="M15 12H3" />
-          </svg>
-        </button>
-        <p class="admin-login-message" data-login-message></p>
+        <button class="button button-primary" type="submit">로그인 <span aria-hidden="true">↗</span></button>
+        <p class="admin-login-message" role="status" aria-live="polite" data-login-message></p>
       </form>
+      <p class="admin-login-footnote">Protected by signed session cookies and same-origin request validation.</p>
     </main>
   </body>
 </html>
