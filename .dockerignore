@@ -26,7 +26,10 @@ node_modules
 dist
 build
 .cache
-data
+data/*
+!data/content-defaults.json
+public/uploads/*
+!public/uploads/.gitkeep
 uploads
 storage
 backups

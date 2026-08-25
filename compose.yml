@@ -16,6 +16,9 @@ services:
       - type: bind
         source: ./data
         target: /app/data
+      - type: bind
+        source: ./public/uploads
+        target: /app/public/uploads
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8007/api/uptime').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
       interval: 30s
